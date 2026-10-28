@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<section class="hero"><p>APPLICATION SECURITY LAB</p><h1>SecureShop</h1><p>A fictional storefront for controlled local testing.</p><a class="button" href="/products">Browse products</a></section><h2>Catalogue</h2><div class="grid">{% for p in products %}<article><h3>{{p[1]}}</h3><p>{{p[2]}}</p><b>${{p[3]}}</b></article>{% endfor %}</div><p class="mode">{{'Remediated mode' if secure else 'Vulnerable lab mode'}} · loopback only</p>{% endblock %}
+

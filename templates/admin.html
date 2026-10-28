@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<h1>Admin area</h1><h2>Users</h2><table><tr><th>ID</th><th>User</th><th>Admin</th></tr>{% for u in users %}<tr><td>{{u['id']}}</td><td>{{u['username']}}</td><td>{{u['is_admin']}}</td></tr>{% endfor %}</table><h2>Products</h2>{% for p in products %}<p>{{p[1]}} - ${{p[3]}}</p>{% endfor %}{% endblock %}
+

@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<h1>Order history</h1><table><tr><th>ID</th><th>Item</th><th>Total</th></tr>{% for o in orders %}<tr><td>{{o['id']}}</td><td>{{o['item']}}</td><td>{{o['total']}}</td></tr>{% else %}<tr><td colspan="3">No orders.</td></tr>{% endfor %}</table>{% endblock %}
+

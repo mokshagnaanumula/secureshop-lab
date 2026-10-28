@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<h1>Products</h1><form><label>Search <input name="q" value="{{q}}"></label><button>Search</button></form><div class="grid">{% for p in products %}<article><h2>{{p['name']}}</h2><p>{{p['description']}}</p><b>${{p['price']}}</b><form method="post" action="/cart"><input type="hidden" name="item" value="{{p['name']}}"><button>Add to cart</button></form></article>{% else %}<p>No matches.</p>{% endfor %}</div>{% endblock %}
+
